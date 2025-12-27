@@ -7,6 +7,18 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "axios": "^1.13.2",
     "express": "^5.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylandk0226/FED_Assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylandk0226/FED_Assignment/issues"
+  },
+  "homepage": "https://github.com/dylandk0226/FED_Assignment#readme"
 }
