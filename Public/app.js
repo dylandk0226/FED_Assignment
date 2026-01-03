@@ -1,4 +1,4 @@
-const BASE_URL = "https://localhost:3000/api";
+const BASE_URL = "http://localhost:3000/api";
 
 const API = {
     getUser: async () => {
@@ -97,12 +97,12 @@ const API = {
         return response.data;
     },
 
-    getTransactionsSummary: async () => {
+    getTransactionsSummary: async (month, year) => {
         const params = {};
         if (month !== undefined) params.month = month;
         if (year !== undefined) params.year = year;
 
-        const response = await axios.get(`${BASE_URL}/summary/transactions`);
+        const response = await axios.get(`${BASE_URL}/summary/transactions`, { params });
         return response.data;
     },
 

@@ -7,8 +7,11 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
     "axios": "^1.13.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
   },
   "repository": {
     "type": "git",

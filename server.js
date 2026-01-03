@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('Public'));
 
 const DB = require('./data.js');
 
@@ -58,7 +58,7 @@ function calculateGoalProgress(goal) {
         return goal.targetAmount;
     }
 
-    const categoryTransactions = DB.transactions.filter(t => t.category && goal.name && t.category.totalLowerCase() === goal.name.toLowerCase());
+    const categoryTransactions = DB.transactions.filter(t => t.category && goal.name && t.category.toLowerCase() === goal.name.toLowerCase());
 
     const currentAmount = categoryTransactions.reduce((sum, t) => {
         return sum + t.amount;
@@ -76,6 +76,12 @@ function getCategorySpending(categoryName) {
 
 // Get total income for a category
 function getCategoryIncome(categoryName) {
+    return DB.transactions
+        .filter(t => t.category && categoryName && t.category.toLowerCase() === categoryName.toLowerCase() && t.type === 'income')
+        .reduce((sum, t) => sum + t.amount, 0);
+}
+
+function getCategoryContributions(categoryName) {
     return DB.transactions
         .filter(t => t.category && categoryName && t.category.toLowerCase() === categoryName.toLowerCase() && t.type === 'income')
         .reduce((sum, t) => sum + t.amount, 0);
@@ -242,12 +248,12 @@ app.get('/api/summary/goals', (req, res) => {
         if (goal.status === 'completed'){
             goalSaved = goal.targetAmount;
         }else {
-            const incomeTransactions = DB.transaction.filter(t => t.category.toLowerCase() === goal.name.toLowerCase() && t.type === 'income');
-
-        goalSaved = incomeTransactions.reduce((incomeSum, t) => {
-            return incomeSum + t.amount;
-        }, 0);
-    }
+            const incomeTransactions = DB.transactions.filter(t => t.category && goal.name && t.category.toLowerCase() === goal.name.toLowerCase() && t.type === 'income');
+            
+            goalSaved = incomeTransactions.reduce((incomeSum, t) => {
+                return incomeSum + t.amount;
+            }, 0);
+        }
 
     return sum + goalSaved;
 }, 0);
@@ -281,7 +287,7 @@ app.put('/api/transactions/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const index = DB.transactions.findIndex(t => t.id === id);
 
-    if (index !== -1) {
+    if (index === -1) {
         return res.status(404).json({ error: 'Transaction not found' });
     }
 
@@ -298,7 +304,7 @@ app.delete('/api/transactions/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const index = DB.transactions.findIndex(t => t.id === id);
 
-    if (index !== -1) {
+    if (index === -1) {
         return res.status(404).json({ error: 'Transaction not found' });
     }
 

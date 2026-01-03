@@ -1,6 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-    setupMobileMenu();
+document.addEventListener('DOMContentLoaded', async () => {
+    await initProfile();
 });
+
+async function initProfile() {
+    setupMobileMenu();
+}
 
 function setupMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
