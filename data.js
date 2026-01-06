@@ -56,6 +56,14 @@ const goals = [
         status: "completed",
         completedDate: "2025-11-30",
         goalType: "expense",
+    },
+    {
+        id: 7,
+        name: "Dividend",
+        targetAmount: 1000,
+        targetDate: "2026-01-01",
+        status: "active",
+        goalType: "income",
     }
 ];
 
