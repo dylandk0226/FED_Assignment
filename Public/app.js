@@ -1,18 +1,16 @@
-const BASE_URL = "http://localhost:3000/api";
-
 const API = {
     getUser: async () => {
-        const response = await axios.get(`${BASE_URL}/user`);
+        const response = await axios.get(`/api/user`);
         return response.data;
     },
 
     updateUser: async (userData) => {
-        const response = await axios.put(`${BASE_URL}/user`, userData);
+        const response = await axios.put(`/api/user`, userData);
         return response.data;
     },
 
     updatePassword: async (currentPassword, newPassword) => {
-        const response = await axios.put(`${BASE_URL}/user/password`, {
+        const response = await axios.put(`/api/user/password`, {
             currentPassword,
             newPassword
         });
@@ -20,42 +18,42 @@ const API = {
     },
 
     getGoals: async () => {
-        const response = await axios.get(`${BASE_URL}/goals`);
+        const response = await axios.get(`/api/goals`);
         return response.data;
     },
 
     getGoalById: async (id) => {
-        const response = await axios.get(`${BASE_URL}/goals/${id}`);
+        const response = await axios.get(`/api/goals/${id}`);
         return response.data;
     },
 
     getActiveGoals: async () => {
-        const response = await axios.get(`${BASE_URL}/goals/status/active`);
+        const response = await axios.get(`/api/goals/status/active`);
         return response.data;
     },
 
     getCompletedGoals: async () => {
-        const response = await axios.get(`${BASE_URL}/goals/status/completed`);
+        const response = await axios.get(`/api/goals/status/completed`);
         return response.data;
     },
 
     addGoal: async (goalData) => {
-        const response = await axios.post(`${BASE_URL}/goals`, goalData);
+        const response = await axios.post(`/api/goals`, goalData);
         return response.data;
     },
 
     updateGoal: async (id, goalData) => {
-        const response = await axios.put(`${BASE_URL}/goals/${id}`, goalData);
+        const response = await axios.put(`/api/goals/${id}`, goalData);
         return response.data;
     },
 
     deleteGoal: async (id) => {
-        const response = await axios.delete(`${BASE_URL}/goals/${id}`);
+        const response = await axios.delete(`/api/goals/${id}`);
         return response.data;
     },
 
     getGoalsSummary: async () => {
-        const response = await axios.get(`${BASE_URL}/summary/goals`);
+        const response = await axios.get(`/api/summary/goals`);
         return response.data;
     },
 
@@ -78,22 +76,22 @@ const API = {
     },
 
     getTransactions: async () => {
-        const response = await axios.get(`${BASE_URL}/transactions`);
+        const response = await axios.get(`/api/transactions`);
         return response.data;
     },
 
     addTransaction: async (transactionData) => {
-        const response = await axios.post(`${BASE_URL}/transactions`, transactionData);
+        const response = await axios.post(`/api/transactions`, transactionData);
         return response.data;
     },
 
     updateTransaction: async (id, transactionData) => {
-        const response = await axios.put(`${BASE_URL}/transactions/${id}`, transactionData);
+        const response = await axios.put(`/api/transactions/${id}`, transactionData);
         return response.data;
     },
 
     deleteTransaction: async (id) => {
-        const response = await axios.delete(`${BASE_URL}/transactions/${id}`);
+        const response = await axios.delete(`/api/transactions/${id}`);
         return response.data;
     },
 
@@ -102,17 +100,17 @@ const API = {
         if (month !== undefined) params.month = month;
         if (year !== undefined) params.year = year;
 
-        const response = await axios.get(`${BASE_URL}/summary/transactions`, { params });
+        const response = await axios.get(`/api/summary/transactions`, { params });
         return response.data;
     },
 
     getCategories: async () => {
-        const response = await axios.get(`${BASE_URL}/categories`);
+        const response = await axios.get(`/api/categories`);
         return response.data;
     },
 
     calculateTotalSavings: async () => {
-        const response = await axios.get(`${BASE_URL}/calculations/total-savings`);
+        const response = await axios.get(`/api/calculations/total-savings`);
         return response.data.totalSavings;
     },
 
@@ -121,7 +119,7 @@ const API = {
         if (month !== undefined) params.month = month;
         if (year !== undefined) params.year = year;
 
-        const response = await axios.get(`${BASE_URL}/calculations/monthly-income`, { params });
+        const response = await axios.get(`/api/calculations/monthly-income`, { params });
         return response.data.monthlyIncome;
     },
 
@@ -130,7 +128,7 @@ const API = {
         if (month !== undefined) params.month = month;
         if (year !== undefined) params.year = year;
 
-        const response = await axios.get(`${BASE_URL}/calculations/monthly-expenses`, { params });
+        const response = await axios.get(`/api/calculations/monthly-expenses`, { params });
         return response.data.monthlyExpenses;
     },
 
