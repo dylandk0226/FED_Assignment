@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+    res.redirect('/dashboard.html');
+});
+
 // Middleware
 app.use(express.json());
 app.use(express.static('Public'));
