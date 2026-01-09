@@ -132,7 +132,7 @@ app.get('/api/goals/:id', (req, res) => {
 });
 
 // Get active goals
-app.get('/api/goals/active', (req, res) => {
+app.get('/api/goals/status/active', (req, res) => {
     const activeGoals = DB.goals.filter(g => g.status === 'active').map(goal => ({
         ...goal,
         currentAmount: calculateGoalProgress(goal),
@@ -145,7 +145,7 @@ app.get('/api/goals/active', (req, res) => {
 });
 
 // Get completed goals
-app.get('/api/goals/completed', (req, res) => {
+app.get('/api/goals/status/completed', (req, res) => {
     const completedGoals = DB.goals.filter(g => g.status === 'completed').map(goal => ({
         ...goal,
         currentAmount: calculateGoalProgress(goal),
