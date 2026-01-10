@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/dylandk0226/FED_Assignment/issues"
   },
-  "homepage": "https://github.com/dylandk0226/FED_Assignment#readme"
+  "homepage": "https://github.com/dylandk0226/FED_Assignment#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
