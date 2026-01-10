@@ -3,6 +3,7 @@
 A simple web application to track financial goals, manage transactions, and monitor savings progress.
 
 **Live Demo:** [https://myfingoals.onrender.com](https://myfingoals.onrender.com)
+**Github:** [https://github.com/dylandk0226/FED_Assignment.git](https://github.com/dylandk0226/FED_Assignment.git)
 
 ---
 
