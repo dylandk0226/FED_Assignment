@@ -2,6 +2,14 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+const cors = require('cors');
+app.use(cors({
+    origin: [
+        'https://dylandk0226.github.io',
+        'http://localhost:3000',
+    ]
+}))
+
 app.get('/', (req, res) => {
     res.redirect('/dashboard.html');
 });
