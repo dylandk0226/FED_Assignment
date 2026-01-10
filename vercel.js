@@ -5,8 +5,8 @@
       "dest": "/dashboard.html"
     },
     {
-      "src": "/index.html",
-      "dest": "/index.html"
+      "src": "/profile.html",
+      "dest": "/profile.html"
     },
     {
       "src": "/(.*)",
