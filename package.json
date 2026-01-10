@@ -4,7 +4,9 @@
   "description": "Personal Finance Goal Tracker API",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "predeploy": "echo 'Deploying public folder to GitHub Pages'",
+    "deploy": "gh-pages -d Public"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.18",
