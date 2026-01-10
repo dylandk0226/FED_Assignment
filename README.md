@@ -4,7 +4,9 @@ A simple web application to track financial goals, manage transactions, and moni
 
 - **Live Demo:** [https://myfingoals.onrender.com](https://myfingoals.onrender.com)
 - **Github:** [https://github.com/dylandk0226/FED_Assignment.git](https://github.com/dylandk0226/FED_Assignment.git)
-- **Figma:** [https://www.figma.com/proto/3CYMjqq3mpMTAt3VlPLVkN/MyFinGoals?node-id=87-4149&t=wJqckKo3dsSm7uNE-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2](https://www.figma.com/proto/3CYMjqq3mpMTAt3VlPLVkN/MyFinGoals?node-id=87-4149&t=wJqckKo3dsSm7uNE-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2)
+- **Github Page:** [https://dylandk0226.github.io/FED_Assignment/Public/dashboard.html](https://dylandk0226.github.io/FED_Assignment/Public/dashboard.html)
+- **Figma:** [https://www.figma.com/design/3CYMjqq3mpMTAt3VlPLVkN/MyFinGoals?node-id=0-1&t=xtG3a6pfEQxV3e9T-1](https://www.figma.com/design/3CYMjqq3mpMTAt3VlPLVkN/MyFinGoals?node-id=0-1&t=xtG3a6pfEQxV3e9T-1)
+- **Figma Prototype:** [https://www.figma.com/proto/3CYMjqq3mpMTAt3VlPLVkN/MyFinGoals?node-id=87-4149&t=wJqckKo3dsSm7uNE-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2](https://www.figma.com/proto/3CYMjqq3mpMTAt3VlPLVkN/MyFinGoals?node-id=87-4149&t=wJqckKo3dsSm7uNE-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2)
 
 ---
 
